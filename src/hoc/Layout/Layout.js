@@ -91,7 +91,7 @@ class Layout extends Component {
 
     handleOnBeforeUnload = () => {
       console.log('handleOnBeforeUnload')
-      this.scrollTo(0,0,0);
+      scrollToComponent(this.state.sectionsElem[0],{offset:0,align:'top',duration:0})
     }
 
     updateWindowDimensions() {
