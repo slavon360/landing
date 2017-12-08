@@ -1,0 +1,121 @@
+.ContactsSectionWrp{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.ContactImgWrp{
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  transition: all 1.4s;
+  transform: translate(-130%, 0);
+  opacity: 0;
+}
+.ContactImgWrpActive{
+  transform: translate(0);
+  opacity: 1;
+}
+@media (max-width:1023px){
+  .ContactImgWrpActive{
+    display: none;
+  }
+  .ContactsSectionWrp{
+    height: auto;
+  }
+}
+.ContactImg{
+  width: 100%;
+  position: absolute;
+  top:10%;
+  left: -10%;
+  bottom: 5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 10px 15px 20px rgba(0,0,0,.2);
+}
+.ContactsContainer{
+  display: inline-block;
+  width: 50%;
+  line-height: 1.85;
+  margin-top: 5%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  color: #444;
+  float: right;
+  transition: all 1.5s ease-out;
+  opacity: 0;
+  transform: translate(0, 30%);
+}
+@media (min-width:1600px){
+  .ContactsContainer{
+      line-height: 2.8;
+  }
+}
+.ContactsContainerActive{
+  opacity: 1;
+  transform: translate(0);
+}
+@media (max-width:1023px){
+  .ContactsContainerActive{
+    width: 100%;
+    margin-top: 8%;
+  }
+  .ContactsContainer h2{
+    line-height: 1;
+    margin-top: 5%;
+  }
+  .ContactsContainer{
+    padding: 0 5%;
+    float: none;
+  }
+}
+.ContactsContainer h2,
+.ContactsContainer h3{
+  color: #39dfa5;
+}
+.ContactsContainer h2{
+  margin-top: 0;
+}
+.ContactsContainer h3{
+  text-align: center;
+}
+.ContactsContainer ul{
+  padding-left: 0;
+  list-style: none;
+}
+.ContactsContainer ul li{
+  display: inline-block;
+  width: 50%;
+  margin-left: -4px;
+  margin-bottom: 5%;
+  text-align: center;
+  height: 55px;
+  fill:currentColor;
+  cursor: pointer;
+}
+@media (max-height:450px){
+  .ContactsContainer{
+    line-height: 1;
+    font-size: .9em;
+  }
+  .ContactsContainer ul{
+    margin-bottom: 0;
+  }
+  .ContactsContainer ul li{
+    margin-bottom: .5%;
+  }
+}
+@media (max-width:450px){
+  .ContactsContainer ul li{
+    width: 100%;
+  }
+}
+.ContactsContainer ul a{
+  text-decoration: none;
+  color: inherit;
+}
+.ContactsContainer ul li:hover{
+  color: #39dfa5;
+}

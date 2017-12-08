@@ -1,0 +1,36 @@
+.SideDrawerToggleWrp{
+  position: fixed;
+  top: 1%;
+  right: 5%;
+  width: 28px;
+  height: 28px;
+}
+@media (min-width:768px){
+  .SideDrawerToggleWrp{
+    display: none;
+  }
+}
+.SideDrawerToggleWrp div{
+  position: relative;
+  height: 3px;
+  width: 80%;
+  margin: 5px 10%;
+  background: #1fbdf2;
+}
+.SideDrawerToggleWrp div::before{
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  transition: .25s ease-in;
+  background: rgba(255, 255, 255, 0.85);
+  transition-delay: inherit;
+}
+.SideDrawerToggleWrpActive div::before{
+  width: 100%;
+}
+.SideDrawerToggleWrp div:nth-child(1){
+
+}
