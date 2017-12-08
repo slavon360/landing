@@ -79,19 +79,12 @@ class Layout extends Component {
   }
 
     componentDidMount = () => {
-      window.addEventListener('beforeunload', this.handleOnBeforeUnload);
       this.updateWindowDimensions();
       window.addEventListener('resize', this.updateWindowDimensions);
     }
 
     componentWillUnmount = () => {
-        window.removeEventListener('beforeunload', this.handleOnBeforeUnload);
         window.removeEventListener('resize', this.updateWindowDimensions);
-    }
-
-    handleOnBeforeUnload = () => {
-      console.log('handleOnBeforeUnload')
-      scrollToComponent(this.state.sectionsElem[0],{offset:0,align:'top',duration:10})
     }
 
     updateWindowDimensions() {
@@ -140,7 +133,8 @@ class Layout extends Component {
           <SectionItems
             getSectionsElem={this.getSectionsElemHandler}
             navigationItems={this.state.navigationItems}
-            windowDimensions={this.state.windowDimensions}/>
+            windowDimensions={this.state.windowDimensions}
+            toggleNavigationItem={this.toggleNavigationItemHandler}/>
           <SideDrawer
             closeSideDrawer={this.closeSideDrawerHandler}
             windowDimensions={this.state.windowDimensions}

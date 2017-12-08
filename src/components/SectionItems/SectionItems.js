@@ -5,6 +5,7 @@ import classes from './SectionItems.css';
 const sectionItems = (props) => {
     const sectItems = props.navigationItems.map((navItem, index, array) => {
       return <SectionItem
+                toggleNavigationItem={props.toggleNavigationItem}
                 getSectionsElem={props.getSectionsElem}
                 windowDimensions={props.windowDimensions}
                 index={index}

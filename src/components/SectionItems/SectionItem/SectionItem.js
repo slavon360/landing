@@ -7,6 +7,7 @@ import ContactsSection from './ContactsSection/ContactsSection';
 class SectionItem extends Component {
     componentDidMount(){
       this.props.getSectionsElem(this.sectionItem);
+      this.props.index === this.props.itemsNumber-1 && this.props.toggleNavigationItem(0);
       console.log('componentDidMount',this.sectionItem.clientHeight);
     }
     componentDidUpdate(){
